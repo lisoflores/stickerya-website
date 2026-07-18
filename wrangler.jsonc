@@ -3,6 +3,8 @@
   // `npx wrangler deploy` sube el contenido de "directory" como assets estáticos.
   "name": "stickerya-website",
   "compatibility_date": "2026-07-01",
+  "workers_dev": true,     // servir en la URL pública *.workers.dev
+  "preview_urls": false,   // sin URLs de preview por versión (sitio simple)
   "assets": {
     "directory": "."
   }
