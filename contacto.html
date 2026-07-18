@@ -11,16 +11,16 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contacto — StickerYa!</title>
-<meta name="description" content="¿Ideas, algo que se rompió, o solo saludar? Escribinos. Del otro lado hay personas, no un bot.">
+<title data-i18n-attr="textContent:meta.title.contact">Contacto — StickerYa!</title>
+<meta name="description" data-i18n-attr="content:meta.desc.contact" content="¿Ideas, algo que se rompió, o solo saludar? Escribinos. Del otro lado hay personas, no un bot.">
 <link rel="canonical" href="https://stickerya.app/contacto.html">
 <meta name="theme-color" content="#3B82F6">
 <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="StickerYa!">
 <meta property="og:locale" content="es_LA">
-<meta property="og:title" content="Contacto — StickerYa!">
-<meta property="og:description" content="¿Ideas, algo que se rompió, o solo saludar? Escribinos.">
+<meta property="og:title" data-i18n-attr="content:meta.og.title.contact" content="Contacto — StickerYa!">
+<meta property="og:description" data-i18n-attr="content:meta.og.desc.contact" content="¿Ideas, algo que se rompió, o solo saludar? Escribinos.">
 <meta property="og:url" content="https://stickerya.app/contacto.html">
 <meta property="og:image" content="https://stickerya.app/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%233B82F6'/%3E%3Ctext x='50' y='72' font-size='62' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold' fill='white'%3ES%3C/text%3E%3Ccircle cx='78' cy='30' r='9' fill='%23FACC15'/%3E%3C/svg%3E">
@@ -36,7 +36,14 @@
   <!-- ===== NAV ===== -->
   <header style="max-width:1120px; margin:0 auto; padding:22px clamp(20px,5vw,48px) 0; display:flex; align-items:center; justify-content:space-between; gap:16px;">
     <a href="index.html" style="text-decoration:none; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:26px; letter-spacing:-.3px; color:var(--syT,#0F172A);">StickerYa<span style="color:var(--syY,#FACC15);">!</span></a>
-    <a href="index.html" class="btn-ghost" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:44px; padding:0 20px; border-radius:22px; border:1.5px solid var(--syLine,rgba(148,163,184,.28)); background:var(--sySurf,#fff); color:var(--syT,#0F172A); font-weight:600; font-size:14.5px;"><span style="font-family:'Material Symbols Rounded'; font-size:19px;">arrow_back</span>Volver al sitio</a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <select class="sy-lang-picker" aria-label="Idioma" onchange="sySetLang(this.value)">
+        <option value="es">🇦🇷 ES</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="pt">🇧🇷 PT</option>
+      </select>
+      <a href="index.html" class="btn-ghost" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:44px; padding:0 20px; border-radius:22px; border:1.5px solid var(--syLine,rgba(148,163,184,.28)); background:var(--sySurf,#fff); color:var(--syT,#0F172A); font-weight:600; font-size:14.5px;"><span style="font-family:'Material Symbols Rounded'; font-size:19px;">arrow_back</span><span data-i18n="nav.back">Volver al sitio</span></a>
+    </div>
   </header>
 
   <!-- ===== HEADER DE LA PÁGINA ===== -->
@@ -45,8 +52,8 @@
       <div style="width:96px; height:96px; background:#FEF3C7; border-radius:24px; border:5px solid #fff; transform:rotate(-6deg); box-shadow:0 12px 28px var(--syShadow,rgba(15,23,42,.10)); display:grid; place-items:center; font-size:46px;">💌</div>
       <span style="position:absolute; top:-10px; right:-14px; font-size:24px; animation:syTwinkle 2.8s ease-in-out infinite; animation-play-state:var(--syPlay,running);">✨</span>
     </div>
-    <h1 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,48px); letter-spacing:-.8px; line-height:1.08; margin:24px 0 0; color:var(--syT,#0F172A); text-wrap:balance;">¿Hablamos?</h1>
-    <p style="font-size:clamp(15px,2vw,17px); line-height:1.6; color:var(--syT2,#64748B); margin:12px auto 0; max-width:460px; text-wrap:pretty;">Contanos qué te gustaría ver en StickerYa!, qué se rompió, o pasá solo a saludar. Del otro lado hay personas, no un bot. 💙</p>
+    <h1 data-i18n="contact.h1" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(32px,4.6vw,48px); letter-spacing:-.8px; line-height:1.08; margin:24px 0 0; color:var(--syT,#0F172A); text-wrap:balance;">¿Hablamos?</h1>
+    <p data-i18n="contact.subtitle" style="font-size:clamp(15px,2vw,17px); line-height:1.6; color:var(--syT2,#64748B); margin:12px auto 0; max-width:460px; text-wrap:pretty;">Contanos qué te gustaría ver en StickerYa!, qué se rompió, o pasá solo a saludar. Del otro lado hay personas, no un bot. 💙</p>
   </section>
 
   <!-- ===== CONTENIDO ===== -->
@@ -57,31 +64,31 @@
       <!-- El form usa mailto: funciona sin backend (abre tu app de correo).
            TODO: para envío inline, cambiar action por un endpoint de Formspree/Web3Forms. -->
       <form action="mailto:hola@stickerya.app" method="post" enctype="text/plain">
-        <div style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">¿Qué nos querés contar?</div>
+        <div data-i18n="contact.form.topic.label" style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">¿Qué nos querés contar?</div>
         <select name="tema" class="field" style="height:52px; -webkit-appearance:none; appearance:none;">
-          <option>💡 Una idea o pedido</option>
-          <option>🐛 Algo se rompió</option>
-          <option>👋 Solo saludar</option>
-          <option>💬 Otra cosa</option>
+          <option data-i18n="contact.form.topic.idea">💡 Una idea o pedido</option>
+          <option data-i18n="contact.form.topic.bug">🐛 Algo se rompió</option>
+          <option data-i18n="contact.form.topic.hi">👋 Solo saludar</option>
+          <option data-i18n="contact.form.topic.other">💬 Otra cosa</option>
         </select>
 
         <div style="margin-top:16px;">
-          <div style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">Tu nombre <span style="color:var(--syT2,#64748B); font-weight:500;">(opcional)</span></div>
-          <input class="field" type="text" name="nombre" placeholder="¿Cómo te llamamos?">
+          <div style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;"><span data-i18n="contact.form.name.label">Tu nombre</span> <span data-i18n="contact.form.name.optional" style="color:var(--syT2,#64748B); font-weight:500;">(opcional)</span></div>
+          <input class="field" type="text" name="nombre" data-i18n-attr="placeholder:contact.form.name.ph" placeholder="¿Cómo te llamamos?">
         </div>
 
         <div style="margin-top:16px;">
-          <div style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">Tu email</div>
-          <input class="field" type="email" name="email" required placeholder="Para poder responderte">
+          <div data-i18n="contact.form.email.label" style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">Tu email</div>
+          <input class="field" type="email" name="email" required data-i18n-attr="placeholder:contact.form.email.ph" placeholder="Para poder responderte">
         </div>
 
         <div style="margin-top:16px;">
-          <div style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">Tu mensaje</div>
-          <textarea class="field" name="mensaje" required rows="5" placeholder="Contanos con confianza…"></textarea>
+          <div data-i18n="contact.form.msg.label" style="font-size:13.5px; font-weight:600; color:var(--syT,#0F172A); margin-bottom:7px;">Tu mensaje</div>
+          <textarea class="field" name="mensaje" required rows="5" data-i18n-attr="placeholder:contact.form.msg.ph" placeholder="Contanos con confianza…"></textarea>
         </div>
 
-        <button type="submit" class="btn-primary" style="margin-top:20px; width:100%; height:54px; border:none; cursor:pointer; border-radius:27px; background:var(--syP,#3B82F6); box-shadow:0 8px 20px rgba(59,130,246,.35); display:flex; align-items:center; justify-content:center; gap:9px; color:var(--syOnP,#fff); font-family:Inter,sans-serif; font-weight:700; font-size:16px;"><span style="font-family:'Material Symbols Rounded'; font-size:20px;">send</span>Enviar mensaje</button>
-        <div style="font-size:12.5px; color:var(--syT2,#64748B); text-align:center; margin-top:12px;">Respondemos apenas podemos. Somos poquitos, pero respondemos. 💙</div>
+        <button type="submit" class="btn-primary" style="margin-top:20px; width:100%; height:54px; border:none; cursor:pointer; border-radius:27px; background:var(--syP,#3B82F6); box-shadow:0 8px 20px rgba(59,130,246,.35); display:flex; align-items:center; justify-content:center; gap:9px; color:var(--syOnP,#fff); font-family:Inter,sans-serif; font-weight:700; font-size:16px;"><span style="font-family:'Material Symbols Rounded'; font-size:20px;">send</span><span data-i18n="contact.form.submit">Enviar mensaje</span></button>
+        <div data-i18n="contact.form.footer" style="font-size:12.5px; color:var(--syT2,#64748B); text-align:center; margin-top:12px;">Respondemos apenas podemos. Somos poquitos, pero respondemos. 💙</div>
       </form>
     </div>
 
@@ -89,14 +96,14 @@
     <div style="flex:1 1 280px; max-width:360px; display:flex; flex-direction:column; gap:18px;">
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:24px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10));">
         <div style="width:56px; height:56px; background:#DBEAFE; border-radius:15px; border:4px solid #fff; transform:rotate(4deg); box-shadow:0 6px 14px rgba(15,23,42,.14); display:grid; place-items:center;"><span style="font-family:'Material Symbols Rounded'; font-size:28px; color:#3B82F6; font-variation-settings:'FILL' 1;">mail</span></div>
-        <h2 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin:14px 0 0; color:var(--syT,#0F172A);">¿Preferís tu correo?</h2>
-        <p style="font-size:14px; line-height:1.55; color:var(--syT2,#64748B); margin:6px 0 0;">Escribinos directo a:</p>
+        <h2 data-i18n="contact.email.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin:14px 0 0; color:var(--syT,#0F172A);">¿Preferís tu correo?</h2>
+        <p data-i18n="contact.email.body" style="font-size:14px; line-height:1.55; color:var(--syT2,#64748B); margin:6px 0 0;">Escribinos directo a:</p>
         <a href="mailto:hola@stickerya.app" class="flink" style="text-decoration:none; display:inline-flex; align-items:center; gap:7px; margin-top:10px; font-size:15px; font-weight:700; color:var(--syP,#3B82F6);">hola@stickerya.app</a>
       </div>
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:24px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10));">
         <div style="width:56px; height:56px; background:#FEF9C3; border-radius:15px; border:4px solid #fff; transform:rotate(-5deg); box-shadow:0 6px 14px rgba(15,23,42,.14); display:grid; place-items:center; font-size:28px;">☕</div>
-        <h2 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin:14px 0 0; color:var(--syT,#0F172A);">¿Te gusta StickerYa!?</h2>
-        <p style="font-size:14px; line-height:1.55; color:var(--syT2,#64748B); margin:6px 0 0; text-wrap:pretty;">Podés apoyarla gratis desde la app, mirando un anuncio cuando quieras. Sin gastar un peso. 💛</p>
+        <h2 data-i18n="contact.support.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:19px; margin:14px 0 0; color:var(--syT,#0F172A);">¿Te gusta StickerYa!?</h2>
+        <p data-i18n="contact.support.body" style="font-size:14px; line-height:1.55; color:var(--syT2,#64748B); margin:6px 0 0; text-wrap:pretty;">Podés apoyarla gratis desde la app, mirando un anuncio cuando quieras. Sin gastar un peso. 💛</p>
       </div>
     </div>
   </section>
@@ -106,12 +113,16 @@
     <div style="max-width:1120px; margin:0 auto; padding:28px clamp(20px,5vw,48px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px;">
       <a href="index.html" style="text-decoration:none; font-family:'Baloo 2',sans-serif; font-weight:800; font-size:20px; color:var(--syT,#0F172A);">StickerYa<span style="color:var(--syY,#FACC15);">!</span></a>
       <div style="display:flex; flex-wrap:wrap; gap:8px 26px;">
-        <a href="privacidad.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);">Política de privacidad</a>
-        <span style="font-size:13.5px; font-weight:600; color:var(--syP,#3B82F6);">Contacto</span>
+        <a href="privacidad.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span data-i18n="footer.privacy">Política de privacidad</span></a>
+        <span data-i18n="footer.contact" style="font-size:13.5px; font-weight:600; color:var(--syP,#3B82F6);">Contacto</span>
       </div>
-      <div style="font-size:13px; color:var(--syT2,#64748B);">© 2026 StickerYa!</div>
+      <div data-i18n="footer.copy" style="font-size:13px; color:var(--syT2,#64748B);">© 2026 StickerYa!</div>
     </div>
   </footer>
 </div>
+<script src="i18n/es.js"></script>
+<script src="i18n/en.js"></script>
+<script src="i18n/pt.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>

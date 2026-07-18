@@ -11,8 +11,8 @@
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StickerYa! — Convertí tus fotos en stickers de WhatsApp</title>
-<meta name="description" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos: tus fotos nunca salen de tu teléfono.">
+<title data-i18n-attr="textContent:meta.title.index">StickerYa! — Convertí tus fotos en stickers de WhatsApp</title>
+<meta name="description" data-i18n-attr="content:meta.desc.index" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos: tus fotos nunca salen de tu teléfono.">
 <link rel="canonical" href="https://stickerya.app/">
 <meta name="theme-color" content="#3B82F6">
 <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
@@ -21,13 +21,13 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="StickerYa!">
 <meta property="og:locale" content="es_LA">
-<meta property="og:title" content="StickerYa! — Tus fotos, tus stickers. Sin que salgan de tu teléfono.">
-<meta property="og:description" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos.">
+<meta property="og:title" data-i18n-attr="content:meta.og.title.index" content="StickerYa! — Tus fotos, tus stickers. Sin que salgan de tu teléfono.">
+<meta property="og:description" data-i18n-attr="content:meta.og.desc.index" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos.">
 <meta property="og:url" content="https://stickerya.app/">
 <meta property="og:image" content="https://stickerya.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="StickerYa! — Tus fotos, tus stickers.">
-<meta name="twitter:description" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos.">
+<meta name="twitter:title" data-i18n-attr="content:meta.tw.title.index" content="StickerYa! — Tus fotos, tus stickers.">
+<meta name="twitter:description" data-i18n-attr="content:meta.tw.desc.index" content="Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios molestos.">
 <meta name="twitter:image" content="https://stickerya.app/og-image.png">
 <!-- TODO: al publicar, reemplazar https://stickerya.app por el dominio real y subir og-image.png (1200×630). -->
 
@@ -45,26 +45,33 @@
   <!-- ===== NAV ===== -->
   <header style="max-width:1120px; margin:0 auto; padding:22px clamp(20px,5vw,48px) 0; display:flex; align-items:center; justify-content:space-between; gap:16px;">
     <div style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:26px; letter-spacing:-.3px; color:var(--syT,#0F172A);">StickerYa<span style="color:var(--syY,#FACC15);">!</span></div>
-    <a href="#descargar" class="btn-primary" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:44px; padding:0 20px; border-radius:22px; background:var(--syP,#3B82F6); color:var(--syOnP,#fff); font-weight:700; font-size:14.5px; box-shadow:0 6px 16px rgba(59,130,246,.30);"><span style="font-family:'Material Symbols Rounded'; font-size:19px;">download</span>Descargar</a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <select class="sy-lang-picker" aria-label="Idioma" onchange="sySetLang(this.value)">
+        <option value="es">🇦🇷 ES</option>
+        <option value="en">🇺🇸 EN</option>
+        <option value="pt">🇧🇷 PT</option>
+      </select>
+      <a href="#descargar" class="btn-primary" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:44px; padding:0 20px; border-radius:22px; background:var(--syP,#3B82F6); color:var(--syOnP,#fff); font-weight:700; font-size:14.5px; box-shadow:0 6px 16px rgba(59,130,246,.30);"><span style="font-family:'Material Symbols Rounded'; font-size:19px;">download</span><span data-i18n="nav.download">Descargar</span></a>
+    </div>
   </header>
 
   <!-- ===== HERO ===== -->
   <section style="max-width:1120px; margin:0 auto; padding:clamp(40px,7vw,84px) clamp(20px,5vw,48px) clamp(56px,8vw,100px); display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:clamp(32px,5vw,56px);">
     <div style="flex:1 1 460px; max-width:600px;">
-      <h1 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(38px,5.6vw,62px); line-height:1.06; letter-spacing:-1px; margin:0; color:var(--syT,#0F172A); text-wrap:balance;">Tus fotos, tus stickers. <span style="color:var(--syP,#3B82F6);">Sin que salgan de tu teléfono.</span></h1>
-      <p style="font-size:clamp(16px,2vw,18.5px); line-height:1.6; color:var(--syT2,#64748B); margin:20px 0 0; max-width:480px; text-wrap:pretty;">Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios que te vuelvan loco.</p>
+      <h1 data-i18n-html="hero.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(38px,5.6vw,62px); line-height:1.06; letter-spacing:-1px; margin:0; color:var(--syT,#0F172A); text-wrap:balance;">Tus fotos, tus stickers. <span style="color:var(--syP,#3B82F6);">Sin que salgan de tu teléfono.</span></h1>
+      <p data-i18n="hero.subtitle" style="font-size:clamp(16px,2vw,18.5px); line-height:1.6; color:var(--syT2,#64748B); margin:20px 0 0; max-width:480px; text-wrap:pretty;">Convertí cualquier foto en un sticker de WhatsApp en menos de un minuto. Gratis, privado y sin anuncios que te vuelvan loco.</p>
       <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-top:30px;">
         <!-- TODO: cuando la app esté en Google Play, apuntar estos botones a la URL del listing. -->
         <a href="#descargar" class="btn-play" style="text-decoration:none; display:flex; align-items:center; gap:12px; height:62px; padding:0 24px 0 18px; border-radius:31px; background:#0F172A; border:1px solid rgba(255,255,255,.14); color:#fff; box-shadow:0 10px 26px var(--syShadow,rgba(15,23,42,.10));">
           <svg width="26" height="28" viewBox="0 0 24 26" aria-hidden="true"><path d="M3.5 1.3 14.6 12 3.5 22.7 C3.1 22.4 2.9 21.9 2.9 21.4 V2.6 C2.9 2.1 3.1 1.6 3.5 1.3 Z" fill="#00C6FF"></path><path d="M4.4 .9 L18 8.6 14.6 12 3.5 1.3 C3.7 1.1 4 .9 4.4 .9 Z" fill="#00E76F"></path><path d="M14.6 12 18 8.6 21.5 10.5 C22.6 11.1 22.6 12.9 21.5 13.5 L18 15.4 Z" fill="#FFD400"></path><path d="M3.5 22.7 14.6 12 18 15.4 4.4 23.1 C4 23.2 3.7 22.9 3.5 22.7 Z" fill="#FF3A44"></path></svg>
-          <span><span style="display:block; font-size:10.5px; font-weight:600; letter-spacing:1.2px; opacity:.8;">DISPONIBLE EN</span><span style="display:block; font-size:19px; font-weight:700; line-height:1.1;">Google Play</span></span>
+          <span><span data-i18n="hero.gplay.available" style="display:block; font-size:10.5px; font-weight:600; letter-spacing:1.2px; opacity:.8;">DISPONIBLE EN</span><span data-i18n="hero.gplay.label" style="display:block; font-size:19px; font-weight:700; line-height:1.1;">Google Play</span></span>
         </a>
-        <a href="#como" class="btn-ghost" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:54px; padding:0 22px; border-radius:27px; border:1.5px solid var(--syLine,rgba(148,163,184,.28)); background:var(--sySurf,#fff); color:var(--syT,#0F172A); font-weight:600; font-size:15px;">Ver cómo funciona<span style="font-family:'Material Symbols Rounded'; font-size:19px;">arrow_downward</span></a>
+        <a href="#como" class="btn-ghost" style="text-decoration:none; display:flex; align-items:center; gap:7px; height:54px; padding:0 22px; border-radius:27px; border:1.5px solid var(--syLine,rgba(148,163,184,.28)); background:var(--sySurf,#fff); color:var(--syT,#0F172A); font-weight:600; font-size:15px;"><span data-i18n="hero.how">Ver cómo funciona</span><span style="font-family:'Material Symbols Rounded'; font-size:19px;">arrow_downward</span></a>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:16px 22px; margin-top:26px;">
-        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span>Gratis</span>
-        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span>Sin anuncios molestos</span>
-        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span>Funciona sin internet</span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span><span data-i18n="hero.badge.free">Gratis</span></span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span><span data-i18n="hero.badge.noads">Sin anuncios molestos</span></span>
+        <span style="display:flex; align-items:center; gap:6px; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span style="font-family:'Material Symbols Rounded'; font-size:17px; color:#22C55E; font-variation-settings:'FILL' 1;">check_circle</span><span data-i18n="hero.badge.offline">Funciona sin internet</span></span>
       </div>
     </div>
 
@@ -86,8 +93,8 @@
                 <div style="aspect-ratio:1; border-radius:12px; border:3px solid #fff; box-shadow:0 1px 4px rgba(15,23,42,.14); background:#FEF3C7; display:grid; place-items:center; font-size:22px;">🐰</div>
                 <div style="aspect-ratio:1; border-radius:12px; border:3px solid #fff; box-shadow:0 1px 4px rgba(15,23,42,.14); background:#CCFBF1; display:grid; place-items:center; font-size:22px;">🐹</div>
               </div>
-              <div style="font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14px; color:#0F172A; margin-top:9px;">Mis mascotas</div>
-              <div style="font-size:11px; color:#64748B;">4 stickers</div>
+              <div data-i18n="mock.pack1.name" style="font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14px; color:#0F172A; margin-top:9px;">Mis mascotas</div>
+              <div data-i18n="mock.pack1.count" style="font-size:11px; color:#64748B;">4 stickers</div>
             </div>
             <div style="background:#fff; border-radius:20px; padding:10px; box-shadow:0 4px 14px rgba(15,23,42,.07);">
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
@@ -96,12 +103,12 @@
                 <div style="aspect-ratio:1; border-radius:12px; border:3px solid #fff; box-shadow:0 1px 4px rgba(15,23,42,.14); background:#E0E7FF; display:grid; place-items:center; font-size:22px;">💀</div>
                 <div style="aspect-ratio:1; border-radius:12px; border:3px solid #fff; box-shadow:0 1px 4px rgba(15,23,42,.14); background:#FCE7F3; display:grid; place-items:center; font-size:22px;">🤡</div>
               </div>
-              <div style="font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14px; color:#0F172A; margin-top:9px;">Memes</div>
-              <div style="font-size:11px; color:#64748B;">8 stickers</div>
+              <div data-i18n="mock.pack2.name" style="font-family:'Baloo 2',sans-serif; font-weight:600; font-size:14px; color:#0F172A; margin-top:9px;">Memes</div>
+              <div data-i18n="mock.pack2.count" style="font-size:11px; color:#64748B;">8 stickers</div>
             </div>
             <div style="grid-column:1 / -1; background:#fff; border-radius:20px; padding:12px 14px; box-shadow:0 4px 14px rgba(15,23,42,.07); display:flex; align-items:center; gap:11px;">
               <span style="width:40px; height:40px; border-radius:13px; background:#DCFCE7; display:grid; place-items:center;"><span style="font-family:'Material Symbols Rounded'; font-size:22px; color:#16A34A; font-variation-settings:'FILL' 1;">check_circle</span></span>
-              <span style="flex:1;"><span style="display:block; font-weight:700; font-size:13px; color:#0F172A;">¡Pack agregado!</span><span style="display:block; font-size:11px; color:#64748B;">Ya está en WhatsApp 🎉</span></span>
+              <span style="flex:1;"><span data-i18n="mock.added" style="display:block; font-weight:700; font-size:13px; color:#0F172A;">¡Pack agregado!</span><span data-i18n="mock.added.sub" style="display:block; font-size:11px; color:#64748B;">Ya está en WhatsApp 🎉</span></span>
             </div>
           </div>
           <div style="display:flex; justify-content:flex-end; padding:0 16px 20px;">
@@ -122,8 +129,8 @@
   <!-- ===== CÓMO FUNCIONA ===== -->
   <section id="como" style="max-width:1120px; margin:0 auto; padding:clamp(56px,8vw,96px) clamp(20px,5vw,48px);">
     <div style="text-align:center; max-width:560px; margin:0 auto 46px;">
-      <h2 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4vw,42px); letter-spacing:-.6px; line-height:1.1; margin:0; color:var(--syT,#0F172A);">Listo en 3 pasos</h2>
-      <p style="font-size:16px; line-height:1.6; color:var(--syT2,#64748B); margin:12px 0 0;">El mismo flujo que vas a ver en la app. Sin vueltas.</p>
+      <h2 data-i18n="steps.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4vw,42px); letter-spacing:-.6px; line-height:1.1; margin:0; color:var(--syT,#0F172A);">Listo en 3 pasos</h2>
+      <p data-i18n="steps.subtitle" style="font-size:16px; line-height:1.6; color:var(--syT2,#64748B); margin:12px 0 0;">El mismo flujo que vas a ver en la app. Sin vueltas.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:30px 26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10)); text-align:center;">
@@ -132,8 +139,8 @@
           <span style="position:absolute; top:6px; right:10px; font-size:20px;">✨</span>
         </div>
         <div style="width:34px; height:34px; margin:-17px auto 0; border-radius:50%; background:var(--syP,#3B82F6); color:var(--syOnP,#fff); font-family:'Baloo 2',sans-serif; font-weight:700; font-size:17px; display:grid; place-items:center; border:3px solid var(--sySurf,#fff); position:relative;">1</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Elegí una foto</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Desde tu galería. La foto no sale de tu teléfono, prometido. 🔒</p>
+        <h3 data-i18n="steps.1.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Elegí una foto</h3>
+        <p data-i18n="steps.1.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Desde tu galería. La foto no sale de tu teléfono, prometido. 🔒</p>
       </div>
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:30px 26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10)); text-align:center;">
         <div style="position:relative; width:130px; height:130px; margin:0 auto; border-radius:50%; background:radial-gradient(circle at 50% 42%, var(--syGlow,#DBEAFE), var(--syGlow2,#EFF6FF)); display:grid; place-items:center;">
@@ -146,8 +153,8 @@
           </div>
         </div>
         <div style="width:34px; height:34px; margin:-17px auto 0; border-radius:50%; background:#06B6D4; color:#fff; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:17px; display:grid; place-items:center; border:3px solid var(--sySurf,#fff); position:relative;">2</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Recortá a tu gusto</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Movela, hacé zoom, rotala. El encuadre queda perfecto.</p>
+        <h3 data-i18n="steps.2.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Recortá a tu gusto</h3>
+        <p data-i18n="steps.2.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Movela, hacé zoom, rotala. El encuadre queda perfecto.</p>
       </div>
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:30px 26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10)); text-align:center;">
         <div style="position:relative; width:130px; height:130px; margin:0 auto; border-radius:50%; background:radial-gradient(circle at 50% 42%, var(--syGlow,#DBEAFE), var(--syGlow2,#EFF6FF)); display:grid; place-items:center;">
@@ -156,8 +163,8 @@
           <span style="position:absolute; top:8px; right:12px; font-size:20px;">🎉</span>
         </div>
         <div style="width:34px; height:34px; margin:-17px auto 0; border-radius:50%; background:#22C55E; color:#fff; font-family:'Baloo 2',sans-serif; font-weight:700; font-size:17px; display:grid; place-items:center; border:3px solid var(--sySurf,#fff); position:relative;">3</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Sumala a WhatsApp</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Un toque y aparece en tus chats. WhatsApp o WhatsApp Business.</p>
+        <h3 data-i18n="steps.3.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:21px; margin:14px 0 0; color:var(--syT,#0F172A);">Sumala a WhatsApp</h3>
+        <p data-i18n="steps.3.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Un toque y aparece en tus chats. WhatsApp o WhatsApp Business.</p>
       </div>
     </div>
   </section>
@@ -165,7 +172,7 @@
   <!-- ===== POR QUÉ STICKERYA ===== -->
   <section style="max-width:1120px; margin:0 auto; padding:clamp(40px,6vw,72px) clamp(20px,5vw,48px);">
     <div style="text-align:center; max-width:560px; margin:0 auto 40px;">
-      <h2 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4vw,42px); letter-spacing:-.6px; line-height:1.1; margin:0; color:var(--syT,#0F172A);">¿Por qué StickerYa<span style="color:var(--syY,#FACC15);">!</span>?</h2>
+      <h2 data-i18n-html="why.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4vw,42px); letter-spacing:-.6px; line-height:1.1; margin:0; color:var(--syT,#0F172A);">¿Por qué StickerYa<span style="color:var(--syY,#FACC15);">!</span>?</h2>
     </div>
     <div style="border-radius:28px; background:linear-gradient(135deg,#3B82F6,#2563EB); padding:clamp(28px,4vw,44px); display:flex; flex-wrap:wrap; align-items:center; gap:clamp(24px,4vw,44px); box-shadow:0 18px 44px rgba(37,99,235,.32); position:relative; overflow:hidden;">
       <div style="position:absolute; width:300px; height:300px; border-radius:50%; background:rgba(255,255,255,.07); top:-120px; right:-100px;"></div>
@@ -174,31 +181,31 @@
         <span style="position:absolute; top:-12px; right:-10px; font-size:26px; animation:syTwinkle 2.8s ease-in-out infinite; animation-play-state:var(--syPlay,running);">✨</span>
       </div>
       <div style="flex:1 1 340px; position:relative;">
-        <div style="font-size:12.5px; font-weight:700; letter-spacing:1.6px; color:#BFDBFE;">PRIVACIDAD REAL</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(24px,3.2vw,34px); line-height:1.15; margin:8px 0 0; color:#fff; text-wrap:balance;">Lo que es tuyo, se queda en tu teléfono.</h3>
-        <p style="font-size:15.5px; line-height:1.6; color:#DBEAFE; margin:12px 0 0; max-width:520px; text-wrap:pretty;">StickerYa! funciona 100% en tu teléfono. Tus fotos se procesan ahí mismo y no pasan por ningún servidor. Nada se sube, nada se comparte: tus fotos son tuyas y punto.</p>
+        <div data-i18n="why.privacy.label" style="font-size:12.5px; font-weight:700; letter-spacing:1.6px; color:#BFDBFE;">PRIVACIDAD REAL</div>
+        <h3 data-i18n="why.privacy.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(24px,3.2vw,34px); line-height:1.15; margin:8px 0 0; color:#fff; text-wrap:balance;">Lo que es tuyo, se queda en tu teléfono.</h3>
+        <p data-i18n="why.privacy.body" style="font-size:15.5px; line-height:1.6; color:#DBEAFE; margin:12px 0 0; max-width:520px; text-wrap:pretty;">StickerYa! funciona 100% en tu teléfono. Tus fotos se procesan ahí mismo y no pasan por ningún servidor. Nada se sube, nada se comparte: tus fotos son tuyas y punto.</p>
         <div style="display:flex; flex-wrap:wrap; gap:9px; margin-top:18px;">
-          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">wifi_off</span>Funciona sin internet</span>
-          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">cloud_off</span>Sin servidores</span>
-          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">person_off</span>Sin registro</span>
+          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">wifi_off</span><span data-i18n="why.chip.offline">Funciona sin internet</span></span>
+          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">cloud_off</span><span data-i18n="why.chip.noserver">Sin servidores</span></span>
+          <span style="display:flex; align-items:center; gap:6px; height:34px; padding:0 14px; border-radius:17px; background:rgba(255,255,255,.14); color:#fff; font-size:13px; font-weight:600;"><span style="font-family:'Material Symbols Rounded'; font-size:16px;">person_off</span><span data-i18n="why.chip.noreg">Sin registro</span></span>
         </div>
       </div>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px;">
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10));">
         <div style="width:64px; height:64px; background:#FEF9C3; border-radius:16px; border:4px solid #fff; transform:rotate(-5deg); box-shadow:0 6px 14px rgba(15,23,42,.14); display:grid; place-items:center; font-size:32px;">🧘</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Cero anuncios, cero espera</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Nada de mirar un minuto de publicidad para pegar un sticker. Tocás, creás, mandás. Así de zen.</p>
+        <h3 data-i18n="why.noads.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Cero anuncios, cero espera</h3>
+        <p data-i18n="why.noads.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Nada de mirar un minuto de publicidad para pegar un sticker. Tocás, creás, mandás. Así de zen.</p>
       </div>
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10));">
         <div style="width:64px; height:64px; background:#DBEAFE; border-radius:16px; border:4px solid #fff; transform:rotate(4deg); box-shadow:0 6px 14px rgba(15,23,42,.14); display:grid; place-items:center; font-size:32px;">⚡</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Un sticker en 1 minuto</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">De la galería a WhatsApp en menos de lo que tardás en escribir "jajaja".</p>
+        <h3 data-i18n="why.fast.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Un sticker en 1 minuto</h3>
+        <p data-i18n="why.fast.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">De la galería a WhatsApp en menos de lo que tardás en escribir "jajaja".</p>
       </div>
       <div style="background:var(--sySurf,#fff); border-radius:24px; padding:26px; box-shadow:0 10px 30px var(--syShadow,rgba(15,23,42,.10));">
         <div style="width:64px; height:64px; background:#FFE4E6; border-radius:16px; border:4px solid #fff; transform:rotate(-4deg); box-shadow:0 6px 14px rgba(15,23,42,.14); display:grid; place-items:center; font-size:32px;">🤪</div>
-        <h3 style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Stickers de todo</h3>
-        <p style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Tu perro, tu cara, esa foto del asado, el meme del grupo familiar. Si es foto, puede ser sticker.</p>
+        <h3 data-i18n="why.anything.title" style="font-family:'Baloo 2',sans-serif; font-weight:700; font-size:20px; margin:16px 0 0; color:var(--syT,#0F172A);">Stickers de todo</h3>
+        <p data-i18n="why.anything.body" style="font-size:14.5px; line-height:1.55; color:var(--syT2,#64748B); margin:8px 0 0; text-wrap:pretty;">Tu perro, tu cara, esa foto del asado, el meme del grupo familiar. Si es foto, puede ser sticker.</p>
       </div>
     </div>
   </section>
@@ -206,8 +213,8 @@
   <!-- ===== HECHO CON CARIÑO ===== -->
   <section style="max-width:760px; margin:0 auto; padding:clamp(48px,7vw,88px) clamp(20px,5vw,48px); text-align:center;">
     <div style="width:84px; height:84px; margin:0 auto; border-radius:22px; transform:rotate(-6deg); box-shadow:0 12px 28px var(--syShadow,rgba(15,23,42,.10)); display:grid; place-items:center; font-size:44px; border:5px solid #fff; background-color:#DBEAFE;">💙</div>
-    <h2 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(26px,3.6vw,36px); letter-spacing:-.5px; line-height:1.15; margin:22px 0 0; color:var(--syT,#0F172A); text-wrap:balance;">Hecho con cariño, y mejorando siempre</h2>
-    <p style="font-size:16px; line-height:1.65; color:var(--syT2,#64748B); margin:14px auto 0; max-width:540px; text-wrap:pretty;">StickerYa! es un proyecto independiente, hecho con esfuerzo y cuidado por los detalles. Lo seguimos puliendo y sumando mejoras todo el tiempo, porque hacer stickers tiene que ser un gustito, no un trámite.</p>
+    <h2 data-i18n="love.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(26px,3.6vw,36px); letter-spacing:-.5px; line-height:1.15; margin:22px 0 0; color:var(--syT,#0F172A); text-wrap:balance;">Hecho con cariño, y mejorando siempre</h2>
+    <p data-i18n="love.body" style="font-size:16px; line-height:1.65; color:var(--syT2,#64748B); margin:14px auto 0; max-width:540px; text-wrap:pretty;">StickerYa! es un proyecto independiente, hecho con esfuerzo y cuidado por los detalles. Lo seguimos puliendo y sumando mejoras todo el tiempo, porque hacer stickers tiene que ser un gustito, no un trámite.</p>
   </section>
 
   <!-- ===== CTA FINAL ===== -->
@@ -225,15 +232,15 @@
         <span style="width:64px; height:64px; background:#FEF3C7; border-radius:18px; border:4px solid #fff; transform:rotate(3deg) translateY(-6px); box-shadow:0 10px 22px rgba(15,23,42,.26); display:grid; place-items:center; font-size:34px;">🥳</span>
         <span style="width:58px; height:58px; background:#CCFBF1; border-radius:16px; border:4px solid #fff; transform:rotate(8deg); box-shadow:0 8px 18px rgba(15,23,42,.24); display:grid; place-items:center; font-size:30px;">🐶</span>
       </div>
-      <h2 style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4.4vw,46px); letter-spacing:-.6px; line-height:1.1; margin:0; color:#fff; text-wrap:balance;">¿Listo para tu primer sticker?</h2>
-      <p style="font-size:16.5px; line-height:1.6; color:#DBEAFE; margin:12px auto 0; max-width:440px;">Gratis, privado y en menos de un minuto. Tu grupo de amigos no sabe lo que se viene. 😏</p>
+      <h2 data-i18n="cta.title" style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:clamp(30px,4.4vw,46px); letter-spacing:-.6px; line-height:1.1; margin:0; color:#fff; text-wrap:balance;">¿Listo para tu primer sticker?</h2>
+      <p data-i18n="cta.subtitle" style="font-size:16.5px; line-height:1.6; color:#DBEAFE; margin:12px auto 0; max-width:440px;">Gratis, privado y en menos de un minuto. Tu grupo de amigos no sabe lo que se viene. 😏</p>
       <div style="display:flex; justify-content:center; margin-top:30px;">
         <a href="#descargar" class="btn-play" style="text-decoration:none; display:flex; align-items:center; gap:12px; height:64px; padding:0 26px 0 20px; border-radius:32px; background:#0F172A; border:1px solid rgba(255,255,255,.2); color:#fff; box-shadow:0 14px 32px rgba(15,23,42,.36);">
           <svg width="26" height="28" viewBox="0 0 24 26" aria-hidden="true"><path d="M3.5 1.3 14.6 12 3.5 22.7 C3.1 22.4 2.9 21.9 2.9 21.4 V2.6 C2.9 2.1 3.1 1.6 3.5 1.3 Z" fill="#00C6FF"></path><path d="M4.4 .9 L18 8.6 14.6 12 3.5 1.3 C3.7 1.1 4 .9 4.4 .9 Z" fill="#00E76F"></path><path d="M14.6 12 18 8.6 21.5 10.5 C22.6 11.1 22.6 12.9 21.5 13.5 L18 15.4 Z" fill="#FFD400"></path><path d="M3.5 22.7 14.6 12 18 15.4 4.4 23.1 C4 23.2 3.7 22.9 3.5 22.7 Z" fill="#FF3A44"></path></svg>
-          <span style="text-align:left;"><span style="display:block; font-size:11px; font-weight:600; letter-spacing:1.2px; opacity:.8;">DISPONIBLE EN</span><span style="display:block; font-size:20px; font-weight:700; line-height:1.1;">Google Play</span></span>
+          <span style="text-align:left;"><span data-i18n="cta.gplay.available" style="display:block; font-size:11px; font-weight:600; letter-spacing:1.2px; opacity:.8;">DISPONIBLE EN</span><span data-i18n="cta.gplay.label" style="display:block; font-size:20px; font-weight:700; line-height:1.1;">Google Play</span></span>
         </a>
       </div>
-      <div style="font-size:12.5px; color:#BFDBFE; margin-top:16px;">Android 8.0 o superior · Sin registro</div>
+      <div data-i18n="cta.footnote" style="font-size:12.5px; color:#BFDBFE; margin-top:16px;">Android 8.0 o superior · Sin registro</div>
     </div>
   </section>
 
@@ -242,12 +249,16 @@
     <div style="max-width:1120px; margin:0 auto; padding:28px clamp(20px,5vw,48px); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 24px;">
       <div style="font-family:'Baloo 2',sans-serif; font-weight:800; font-size:20px; color:var(--syT,#0F172A);">StickerYa<span style="color:var(--syY,#FACC15);">!</span></div>
       <div style="display:flex; flex-wrap:wrap; gap:8px 26px;">
-        <a href="privacidad.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);">Política de privacidad</a>
-        <a href="contacto.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);">Contacto</a>
+        <a href="privacidad.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span data-i18n="footer.privacy">Política de privacidad</span></a>
+        <a href="contacto.html" class="flink" style="text-decoration:none; font-size:13.5px; font-weight:600; color:var(--syT2,#64748B);"><span data-i18n="footer.contact">Contacto</span></a>
       </div>
-      <div style="font-size:13px; color:var(--syT2,#64748B);">© 2026 StickerYa!</div>
+      <div data-i18n="footer.copy" style="font-size:13px; color:var(--syT2,#64748B);">© 2026 StickerYa!</div>
     </div>
   </footer>
 </div>
+<script src="i18n/es.js"></script>
+<script src="i18n/en.js"></script>
+<script src="i18n/pt.js"></script>
+<script src="i18n.js"></script>
 </body>
 </html>
