@@ -46,7 +46,10 @@
         if (parts.length >= 2) {
           var attr = parts[0].trim();
           var key  = parts.slice(1).join(':').trim();
-          attrEls[i].setAttribute(attr, t(lang, key));
+          var val  = t(lang, key);
+          if (attr === 'textContent') attrEls[i].textContent = val;      // ej. <title>
+          else if (attr === 'innerHTML') attrEls[i].innerHTML = val;
+          else attrEls[i].setAttribute(attr, val);                       // ej. meta content, placeholder
         }
       }
     }
@@ -68,6 +71,14 @@
   window.sySetLang = setLang;
 
   document.addEventListener('DOMContentLoaded', function () {
-    applyLang(pickLang());
+    // Si viene ?lang= en la URL (ej. la app abre la privacidad en el idioma elegido),
+    // ese idioma tiene prioridad y se persiste.
+    var urlLang = null;
+    try { urlLang = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+    if (urlLang && SUPPORTED.indexOf(urlLang) !== -1) {
+      setLang(urlLang);
+    } else {
+      applyLang(pickLang());
+    }
   });
 })();
