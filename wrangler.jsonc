@@ -1,0 +1,9 @@
+{
+  // Sitio estático servido con Workers Static Assets (Cloudflare).
+  // `npx wrangler deploy` sube el contenido de "directory" como assets estáticos.
+  "name": "stickerya-website",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "."
+  }
+}
