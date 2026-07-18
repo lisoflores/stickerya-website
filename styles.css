@@ -1,0 +1,53 @@
+/* StickerYa! — estilos compartidos del sitio */
+:root {
+  --syBg:#F8FAFC; --sySurf:#FFFFFF; --syT:#0F172A; --syT2:#64748B;
+  --syP:#3B82F6; --syPD:#2563EB; --syOnP:#FFFFFF; --syY:#FACC15;
+  --syGlow:#DBEAFE; --syGlow2:#EFF6FF;
+  --syLine:rgba(148,163,184,.28); --syShadow:rgba(15,23,42,.10);
+  --syPlay:running; color-scheme:light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --syBg:#0F172A; --sySurf:#1E293B; --syT:#F1F5F9; --syT2:#94A3B8;
+    --syP:#60A5FA; --syPD:#3B82F6; --syOnP:#0F172A; --syY:#FDE047;
+    --syGlow:#1E3252; --syGlow2:#16243C;
+    --syLine:rgba(148,163,184,.22); --syShadow:rgba(0,0,0,.45);
+    color-scheme:dark;
+  }
+}
+@media (prefers-reduced-motion: reduce) { :root { --syPlay:paused; } }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+::selection { background: #FACC15; color: #0F172A; }
+a { -webkit-tap-highlight-color: transparent; }
+
+@keyframes syFloatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-13px); } }
+@keyframes syFloatB { 0%,100% { transform: translateY(-7px); } 50% { transform: translateY(9px); } }
+@keyframes syTwinkle { 0%,100% { opacity: .35; transform: scale(.85) rotate(-8deg); } 50% { opacity: 1; transform: scale(1.15) rotate(8deg); } }
+@keyframes syFall { 0% { transform: translateY(-12px) rotate(0deg); opacity: 0; } 12% { opacity: 1; } 100% { transform: translateY(150px) rotate(200deg); opacity: 0; } }
+
+/* Botones / links con hover (reemplazan style-hover de Claude Design) */
+.btn-primary { transition: transform .15s ease, box-shadow .15s ease; }
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(59,130,246,.40); }
+.btn-play { transition: transform .15s ease; }
+.btn-play:hover { transform: translateY(-2px); }
+.btn-ghost { transition: border-color .15s ease, color .15s ease; }
+.btn-ghost:hover { border-color: var(--syP); color: var(--syP); }
+.btn-yellow { transition: transform .15s ease; }
+.btn-yellow:hover { transform: translateY(-1px); }
+.flink { transition: color .15s ease; }
+.flink:hover { color: var(--syP); }
+
+/* Campos de formulario (Contacto) */
+.field {
+  width: 100%; border-radius: 14px; border: 1.5px solid var(--syLine);
+  background: var(--syBg); padding: 0 16px; font-family: Inter, sans-serif;
+  font-size: 15px; color: var(--syT); outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+input.field { height: 52px; }
+textarea.field { padding: 14px 16px; line-height: 1.55; resize: vertical; min-height: 120px; }
+.field:focus { border-color: var(--syP); box-shadow: 0 0 0 4px rgba(59,130,246,.16); background: var(--sySurf); }
+.field::placeholder { color: var(--syT2); }
