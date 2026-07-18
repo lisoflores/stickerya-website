@@ -64,7 +64,7 @@ window.I18N.es = {
   "why.noads.title":        "Cero anuncios, cero espera",
   "why.noads.body":         "Nada de mirar un minuto de publicidad para pegar un sticker. Tocás, creás, mandás. Así de zen.",
   "why.fast.title":         "Un sticker en 1 minuto",
-  "why.fast.body":          "De la galería a WhatsApp en menos de lo que tardás en escribir "jajaja".",
+  "why.fast.body":          "De la galería a WhatsApp en menos de lo que tardás en escribir \"jajaja\".",
   "why.anything.title":     "Stickers de todo",
   "why.anything.body":      "Tu perro, tu cara, esa foto del asado, el meme del grupo familiar. Si es foto, puede ser sticker.",
 
@@ -103,7 +103,7 @@ window.I18N.es = {
   "privacy.analytics.body": "Para entender cómo se usa la app y corregir errores, usamos <b style=\"color:var(--syT,#0F172A);\">Firebase</b> (Analytics, Crashlytics y Performance) de Google. Recopila datos <b style=\"color:var(--syT,#0F172A);\">anónimos</b>: eventos de uso (por ejemplo, que se creó un pack), información del dispositivo (modelo, versión de Android, idioma, región aproximada) y reportes de errores. <b style=\"color:var(--syT,#0F172A);\">Nunca incluye tus fotos ni el contenido de tus stickers.</b> No pedimos cuenta ni recopilamos tu nombre, email o teléfono.",
 
   "privacy.ads.title":      "Anuncios (así se mantiene gratis)",
-  "privacy.ads.body":       "StickerYa! es gratis. Para sostenerla mostramos anuncios <b style=\"color:var(--syT,#0F172A);\">opcionales</b> a través de <b style=\"color:var(--syT,#0F172A);\">Google AdMob</b>: son del tipo "mirá un anuncio para apoyar la app", solo si vos elegís verlos. Nunca hay anuncios obligatorios para crear o agregar stickers. AdMob usa el <b style=\"color:var(--syT,#0F172A);\">identificador de publicidad</b> de tu dispositivo para mostrar y medir anuncios. Según tu región, te pediremos consentimiento antes de habilitar anuncios personalizados, y podés restablecer o limitar ese identificador desde <i>Ajustes → Google → Anuncios</i> de Android.",
+  "privacy.ads.body":       "StickerYa! es gratis. Para sostenerla mostramos anuncios <b style=\"color:var(--syT,#0F172A);\">opcionales</b> a través de <b style=\"color:var(--syT,#0F172A);\">Google AdMob</b>: son del tipo \"mirá un anuncio para apoyar la app\", solo si vos elegís verlos. Nunca hay anuncios obligatorios para crear o agregar stickers. AdMob usa el <b style=\"color:var(--syT,#0F172A);\">identificador de publicidad</b> de tu dispositivo para mostrar y medir anuncios. Según tu región, te pediremos consentimiento antes de habilitar anuncios personalizados, y podés restablecer o limitar ese identificador desde <i>Ajustes → Google → Anuncios</i> de Android.",
 
   "privacy.perms.title":    "Permisos que pide la app",
   "privacy.perms.body":     "StickerYa! pide acceso a tus <b style=\"color:var(--syT,#0F172A);\">fotos</b> (únicamente para que elijas cuál convertir en sticker) y a <b style=\"color:var(--syT,#0F172A);\">internet</b> (para la analítica anónima y los anuncios; tus fotos siguen sin salir del teléfono). Podés revocar el acceso a fotos cuando quieras desde los ajustes de Android.",
